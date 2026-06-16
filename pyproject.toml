@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "option-pricing-engine"
+version = "0.1.0"
+description = "Production-quality option pricing engine: Black-Scholes, Binomial Tree, and Monte Carlo with Greeks, sensitivity analysis, benchmarking, and an interactive dashboard."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Quant Engineering" }]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "pandas>=2.1",
+]
+
+[project.optional-dependencies]
+viz = ["plotly>=5.18", "matplotlib>=3.8", "seaborn>=0.13"]
+dashboard = ["streamlit>=1.30", "plotly>=5.18"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "hypothesis>=6.90", "ruff>=0.1", "mypy>=1.7"]
+all = [
+    "plotly>=5.18", "matplotlib>=3.8", "seaborn>=0.13",
+    "streamlit>=1.30",
+    "pytest>=7.4", "pytest-cov>=4.1", "hypothesis>=6.90",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: end-to-end tests across modules",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+disallow_untyped_defs = true
+ignore_missing_imports = true

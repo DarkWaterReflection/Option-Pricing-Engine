@@ -1,0 +1,17 @@
+# Core numerical stack
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+
+# Visualization
+plotly>=5.18
+matplotlib>=3.8
+seaborn>=0.13
+
+# Dashboard
+streamlit>=1.30
+
+# Testing / quality
+pytest>=7.4
+pytest-cov>=4.1
+hypothesis>=6.90

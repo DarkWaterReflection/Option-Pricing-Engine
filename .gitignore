@@ -1,0 +1,35 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Outputs
+outputs/
+*.png
+*.html
+benchmarks/results/
+
+# Claude Code local settings
+.claude/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
