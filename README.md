@@ -105,6 +105,3 @@ streamlit run dashboard/app.py
 
 Binomial error scales $O(1/N)$; Monte Carlo error scales $O(1/\sqrt{M})$.
 
-## License
-
-MIT.
